@@ -42,20 +42,26 @@ cur=mydb.cursor()
 
 
 # t="SELECT * from student WHERE height>5"
-# cur.execute(t)
+# cur.execute(t)Learn
 # result = cur.fetchall()
 # for res in result:
 #     print(res)
 
-# s='UPDATE student SET height = height+1 WHERE height<5'
-
+# s="DELETE FROM student WHERE name='mk'"
 # cur.execute(s)
 # mydb.commit()
-# result = cur.fetchall()
-# for res in result:
-#     print(res)
 
-s="DELETE FROM student WHERE name='mk'"
+# Creating new table 
+# s="CREATE TABLE teacher(teacherID integer(10), name varchar(30), subject varchar(20), salary integer(10))"
+
+# data = [(1,'Mohtashim','Maths',10000),(2,'Pratyush','Physics',11000),(3,'Shivansh','Designing',9000),(4,'Sahil','Cashier',0),(5,'Tushar','HomeScience',2000)]
+# s="INSERT INTO teacher(teacherID,name,subject,salary) VALUES (%s,%s,%s,%s)"
+# cur.executemany(s,data)
+# mydb.commit()
+
+s="UPDATE teacher SET salary = salary+4000 where salary=0"
+
 cur.execute(s)
 mydb.commit()
+
 print("Done")
