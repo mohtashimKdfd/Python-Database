@@ -47,12 +47,15 @@ cur=mydb.cursor()
 # for res in result:
 #     print(res)
 
-s='UPDATE student SET height = height+1 WHERE height<5'
+# s='UPDATE student SET height = height+1 WHERE height<5'
 
+# cur.execute(s)
+# mydb.commit()
+# result = cur.fetchall()
+# for res in result:
+#     print(res)
+
+s="DELETE FROM student WHERE name='mk'"
 cur.execute(s)
 mydb.commit()
-result = cur.fetchall()
-for res in result:
-    print(res)
-
 print("Done")
